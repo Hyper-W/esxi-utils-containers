@@ -26,7 +26,7 @@ COPY --from=Downloader /opt/powershell /opt/powershell
 
 RUN ln -s "/opt/powershell/${PSVersionMajor}/pwsh" /usr/bin/pwsh \
     && ln -s "/opt/powershell/${PSVersionMajor}/pwsh" /usr/bin/PowerShell \
-    && pwsh -Command 'Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$False' -Force \
+    && pwsh -Command 'Install-Module -Name VCF.PowerCLI -Scope AllUsers -Confirm:$False' -Force \
     && pwsh -Command 'Set-PowerCLIConfiguration -ParticipateInCEIP $false -Scope AllUsers -Confirm:$False' \
     && pwsh -Command 'Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$False'
 
