@@ -7,7 +7,7 @@ services:
         - PSVersionMinor=${PSVersionMinor:-4} # Powershell Minor Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionPatch.
         - PSVersionPatch=${PSVersionPatch:-11} # Powershell Patch Version. Exclusive: PSVersion. Dependence: PSVersionMajor,PSVersionMinor.
         # - PSVersion=${PSVersionMajor:-7}.${PSVersionMinor:-4}.${PSVersionPatch:-11} # Exclusive: PSVersionMajor,PSVersionMinor,PSVersionPatch.
-    image: ghcr.io/hyper-w/esxi-utils-containers/esxi-util:alpine
+    image: ghcr.io/hyper-w/esxi-utils-containers/esxi-util:alpine-vmware-powercli
     container_name: esxi-util
     tty: true
     entrypoint: ["pwsh"]
